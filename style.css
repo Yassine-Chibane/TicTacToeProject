@@ -4,6 +4,10 @@
     margin:10px;
 }
 
+#container2
+{
+    clear: left;
+}
 #grid, #rules, #container2
 {
     display:none;
@@ -18,16 +22,17 @@ label, select
 }
 #btnResult, #btnPlay
 {
+    margin-top: 25px;
     background: black;
     color: white;
     border-radius: 5px;
-    font-size: 25px;
+    font-size: 30px;
     padding: 5px;
 }
 #grid
 {
     width: 400px;
-    margin: 0px auto;
+    margin: 50px auto;
 }
 .square
 {
@@ -66,4 +71,17 @@ label, select
 {
     content: "O";
     color:blue;
+}
+
+#btnResult.win
+{
+    background: green;
+}
+#btnResult.lost
+{
+    background: red;
+}
+#btnResult.draw
+{
+    background: grey;
 }
