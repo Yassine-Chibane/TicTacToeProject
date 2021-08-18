@@ -1,0 +1,17 @@
+#container1, #rules, #container2
+{
+    text-align:center
+}
+
+#grid, #rules, #container2
+{
+    display:none
+}
+label, select
+{
+    font-size: 25px;
+}
+#rules
+{
+    font-size: 30px;
+}
