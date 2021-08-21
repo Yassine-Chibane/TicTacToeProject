@@ -43,7 +43,7 @@ function yourTurn(){
 function placeRandom()
     {
         var choose = $(".square:not(.marked)") //Choose a square that is not already marked
-        var ranPosition = Math.floor(Math.random()*choose.length)
+        var ranPosition = Math.floor(Math.random()*choose.length) //value between 0 and 7
         var randElement = choose[ranPosition]
         $(randElement).addClass("o-mark marked")
         var currentPos = $(randElement).data("position")
@@ -129,9 +129,9 @@ function computerTurnHard()
         4:[[1,7],[5,6]],
         5:[[2,8],[4,6],[1,9],[3,7]],
         6:[[3,9],[4,5]],
-        7:[[8,9],[1,4]],
+        7:[[8,9],[1,4], [3,5]],
         8:[[2,5],[7,9]],
-        9:[[3,6],[7,8]]
+        9:[[3,6],[7,8],[1,5]]
     }
 
     var chooseX = $(".x-mark")
@@ -218,6 +218,53 @@ function computerTurnHard()
             }
             
         }
+    }
+    else if(chooseX.length == 4)
+    {
+        console.log()
+        for(var z in chancesToWin)
+        {
+            var possibilities = [joinedArr[0]+joinedArr[1], joinedArr[0]+joinedArr[2], joinedArr[0]+joinedArr[3], joinedArr[1]+joinedArr[2], joinedArr[1]+joinedArr[3], joinedArr[2]+joinedArr[3]]
+            console.log(possibilities)
+            $.each(chancesToWin[z], function (index, withinArray)
+            {
+                if($("o-mark").length == 4)
+                return false
+                else
+                {
+                    console.log("inside each")
+                for (var k=0;k<possibilities.length;k++)
+                {
+                    console.log("inside for")
+                    if(possibilities[k] == withinArray.join("") && $("#s"+z).attr("class").indexOf("marked") < 0)
+                    {
+                        console.log(possibilities[k] + " : " + withinArray.join(""))
+                        $("#s"+z).addClass("o-mark marked")
+                        trackWinner(Number(z), "o-mark")
+                        return false
+
+                    }
+                }
+
+                }
+            
+                
+
+            })
+        }
+        if($(".o-mark"),length == 3)
+        {
+            if(flag == true)
+            {
+                findCenterWinningPosition()
+            }
+            else
+            {
+                placeRandom()
+            }
+            
+        }
+
     }
 }
 function findCenterWinningPosition()
