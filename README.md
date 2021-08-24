@@ -29,18 +29,9 @@ For the hard level, we implemented several logics for each move in a way that th
 Once the game is over, it will display whether you have won, lost or drew then it will give you the option to play again
 
 
-if the user chooses s5 the computer will pick s1, the computer takes s5 for any other m0ve
+if the user chooses s5 the computer will pick s1, the computer takes s5 for any other move
 ​
-### Prerequisites
-Internet
-​
-```
-Give examples
-```
-​
-End with an example of getting some data out of the system or using it for a little demo
 
-​
 ## Github pages link :
 
 https://yassine-chibane.github.io/TicTacToeProject/
