@@ -27,6 +27,9 @@ For the easy level, we have used a Math.random method so the computer can use a 
 For the hard level, we implemented several logics for each move in a way that the computer will take consideration of the user's move then defend the corners before attacking and trying to win the game
 
 Once the game is over, it will display whether you have won, lost or drew then it will give you the option to play again
+
+
+if the user chooses s5 the computer will pick s1, the computer takes s5 for any other m0ve
 ​
 ### Prerequisites
 Internet
